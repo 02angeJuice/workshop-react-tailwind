@@ -5,7 +5,8 @@ import Content from "../components/landing/Content"
 export default function LandingPage({ children }) {
   return (
     <div
-      className={`min-h-screen bg-[url(images/image.png)] bg-center bg-cover px-24 py-4`}
+      style={{ backgroundImage: "url(images/image.png)" }}
+      className={`min-h-screen bg-center bg-cover px-24 py-4`}
     >
       <Navbar />
       <Content />
