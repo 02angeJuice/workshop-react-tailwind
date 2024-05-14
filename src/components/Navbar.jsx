@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import { Fragment, useEffect, useRef } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline"
 
@@ -6,7 +6,7 @@ import ProfileImage from "../assets/kobayashi.png"
 
 const navigation = [
   { name: "About", href: "#", current: true },
-  { name: "Experience", href: "#", current: false },
+  { name: "Experience", href: "#exp", current: false },
 
   // todo เพิ่มเมนู
   // { name: "Projects", href: "#", current: false },
@@ -18,6 +18,30 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const expLinkRef = useRef(null)
+
+  useEffect(() => {
+    const handleSmoothScroll = (event) => {
+      event.preventDefault()
+      const targetId = event.currentTarget.getAttribute("href").substring(1)
+      const targetElement = document.getElementById(targetId)
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+
+    const expLink = expLinkRef.current
+    if (expLink) {
+      expLink.addEventListener("click", handleSmoothScroll)
+    }
+
+    return () => {
+      if (expLink) {
+        expLink.removeEventListener("click", handleSmoothScroll)
+      }
+    }
+  }, [])
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (

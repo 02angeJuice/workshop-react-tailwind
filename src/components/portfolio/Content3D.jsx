@@ -46,7 +46,7 @@ const Controls = () => {
   )
 }
 
-const Content3D = ({ children }) => {
+export default function Content3D({ children }) {
   return (
     <div
       style={{
@@ -86,9 +86,16 @@ const Content3D = ({ children }) => {
         <Model />
       </Canvas>
 
-      {children}
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <h1>Hello</h1>
+      </div>
     </div>
   )
 }
-
-export default Content3D

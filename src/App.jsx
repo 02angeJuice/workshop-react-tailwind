@@ -1,19 +1,35 @@
 import React from "react"
-import { Hero, Navbar, About, Experience, Content3D } from "./components"
-import Greeting from "./components/Greeting"
+import { Routes, Route } from "react-router-dom"
+
+import LandingPage from "./pages/LandingPage"
+import PortfolioPage from "./pages/PortfolioPage"
+import { OtherPage } from "./pages/OtherPage"
 
 const App = () => {
   return (
     <>
-      <Navbar />
+      {/* <div className="container min-h-screen bg-[url('images/image.png')] bg-center bg-cover"> */}
+      {/* <Navbar /> */}
       {/* <Hero /> */}
+      {/* <Nav /> */}
 
-      <Content3D>
-        <Greeting />
-      </Content3D>
+      {/* <Content3D>
+          <Greeting />
+        </Content3D>
 
-      <About />
-      <Experience />
+        <About />
+        <Experience /> */}
+      {/* </div> */}
+
+      {/* <OtherPage /> */}
+
+      {/* <LandingPage /> */}
+
+      <Routes>
+        <Route path="/" element={<PortfolioPage />} />
+        <Route path="/other" element={<OtherPage />} />
+        <Route path="/landing" element={<LandingPage />} />
+      </Routes>
     </>
   )
 }

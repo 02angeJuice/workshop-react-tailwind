@@ -5,7 +5,7 @@ import {
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 
-import { experiences } from "../constants/dummy_data"
+import { experiences } from "../../constants/dummy_data"
 
 import { FaBook } from "react-icons/fa"
 
@@ -41,13 +41,13 @@ const TimelineCard = ({ item }) => {
 
 const Experience = () => {
   return (
-    <>
+    <div href="exp">
       <VerticalTimeline>
         {experiences?.map((item, idx) => {
           return <TimelineCard key={idx} item={item} />
         })}
       </VerticalTimeline>
-    </>
+    </div>
   )
 }
 

@@ -1,6 +1,6 @@
 import React from "react"
 import Card from "./Card"
-import { services } from "../constants/dummy_data"
+import { services } from "../../constants/dummy_data"
 
 const randomImages = () => {
   return "https://source.unsplash.com/random?wallpapers"
