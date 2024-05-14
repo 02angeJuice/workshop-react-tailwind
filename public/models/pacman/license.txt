@@ -1,0 +1,11 @@
+Model Information:
+* title:	Horror Pac-Man
+* source:	https://sketchfab.com/3d-models/horror-pac-man-a69384b62c734f6282fd0deb12abd3c7
+* author:	4Den (https://sketchfab.com/4Den)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Horror Pac-Man" (https://sketchfab.com/3d-models/horror-pac-man-a69384b62c734f6282fd0deb12abd3c7) by 4Den (https://sketchfab.com/4Den) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

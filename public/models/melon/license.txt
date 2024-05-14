@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bunny Melon!!
+* source:	https://sketchfab.com/3d-models/bunny-melon-2ad5080cbea3428daa687cb8bd4da207
+* author:	Kigha (https://sketchfab.com/Kigha)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bunny Melon!!" (https://sketchfab.com/3d-models/bunny-melon-2ad5080cbea3428daa687cb8bd4da207) by Kigha (https://sketchfab.com/Kigha) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
