@@ -6,6 +6,10 @@ import Hero from "../components/other/Hero"
 import AboutUs from "../components/other/AboutUs"
 import { IntroContent } from "../components/other/IntroContent"
 import { Sidebar } from "../components/other/Sidebar"
+import CTA from "../components/other/CTA"
+import Testimonials from "../components/other/Testimonials"
+import GetInTouch from "../components/other/GetInTouch"
+import Footer from "../components/other/Footer"
 
 export const OtherPage = () => {
   return (
@@ -19,6 +23,10 @@ export const OtherPage = () => {
         <Hero />
         <AboutUs />
         <IntroContent />
+        <CTA />
+        <Testimonials />
+        <GetInTouch />
+        <Footer />
       </div>
     </>
   )
