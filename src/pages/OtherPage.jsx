@@ -11,23 +11,23 @@ import Testimonials from "../components/other/Testimonials"
 import GetInTouch from "../components/other/GetInTouch"
 import Footer from "../components/other/Footer"
 
-export const OtherPage = () => {
+export default function OtherPage() {
   return (
     <>
-      <div className="transition-all block sm:hidden">
+      {/* <div className="transition-all block sm:hidden">
         <Sidebar />
       </div>
 
-      <div className="transition-all hidden sm:block">
-        <Navbar />
-        <Hero />
-        <AboutUs />
-        <IntroContent />
-        <CTA />
-        <Testimonials />
-        <GetInTouch />
-        <Footer />
-      </div>
+      <div className="transition-all hidden sm:block"> */}
+      <Navbar />
+      <Hero />
+      <AboutUs />
+      <IntroContent />
+      <CTA />
+      <Testimonials />
+      <GetInTouch />
+      <Footer />
+      {/* </div> */}
     </>
   )
 }

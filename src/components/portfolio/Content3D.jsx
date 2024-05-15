@@ -1,7 +1,10 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { useGLTF, OrbitControls, Line } from "@react-three/drei"
 import { AnimationMixer } from "three"
+
+import { TypeAnimation } from "react-type-animation"
+import { FaArrowDown } from "react-icons/fa"
 
 const Model = () => {
   const { scene, animations } = useGLTF("./models/space-boi/scene.gltf")
@@ -42,13 +45,18 @@ const Controls = () => {
       enableRotate
       enableZoom={false}
       autoRotate
+      maxPolarAngle={Math.PI / 2} // Limit vertical rotation
+      minPolarAngle={-Math.PI / 2} // Limit vertical rotation
+      maxAzimuthAngle={Infinity} // Allow full horizontal rotation
+      minAzimuthAngle={-Infinity} // Allow full horizontal rotation
     />
   )
 }
 
 export default function Content3D({ children }) {
   return (
-    <div
+    <section
+      id="index"
       style={{
         height: "100vh",
         width: "100%",
@@ -89,13 +97,66 @@ export default function Content3D({ children }) {
       <div
         style={{
           position: "absolute",
-          top: "50%",
+          top: "20%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+
+          whiteSpace: "pre-line",
+          textAlign: "center",
+        }}
+      >
+        {/* <h1 className="text-white text-7xl">Hello, Here I am. </h1> */}
+
+        <TypeAnimation
+          className="text-white text-6xl"
+          preRenderFirstString={true}
+          sequence={[
+            2000,
+            "hello.",
+            2000,
+            `i am\n`,
+            2000,
+            `i am\nwatcharaphong`,
+            2000,
+            `you can call me`,
+            2000,
+            `you can call me\n"jumbo"`,
+            5000,
+            "welcome",
+            5000,
+            "happy to meet you",
+            // "We produce food for Guinea Pigs",
+            // 1000,
+            // "We produce food for Chinchillas",
+            // 1000,
+          ]}
+          wrapper="span"
+          speed={{ type: "keyStrokeDelayInMs", value: 250 }}
+          repeat={Infinity}
+        />
+      </div>
+
+      <div
+        style={{
+          position: "absolute",
+          bottom: "10%",
           left: "50%",
           transform: "translate(-50%, -50%)",
         }}
       >
-        <h1>Hello</h1>
+        <a
+          href="#about"
+          className="cursor-pointer transition-all bg-white text-black px-6 py-3 rounded-full
+          border-gray-600 inline-block mr-4 
+          border-b-[4px] 
+          hover:brightness-110
+          hover:-translate-y-[1px]
+          hover:border-b-[6px]
+          active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+        >
+          <FaArrowDown size={25} />
+        </a>
       </div>
-    </div>
+    </section>
   )
 }
