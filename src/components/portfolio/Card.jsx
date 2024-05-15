@@ -8,7 +8,7 @@ const Card = ({ title, image }) => (
     >
       <img
         style={{ width: "100%", height: "250px", objectFit: "cover" }}
-        className="rounded-t-lg"
+        className="rounded-t-lg "
         src={image}
         alt=""
       />

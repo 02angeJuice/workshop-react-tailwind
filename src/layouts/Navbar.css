@@ -1,0 +1,25 @@
+.menu-open {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.menu-close {
+  animation: slideOut 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-300%);
+  }
+}

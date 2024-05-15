@@ -1,5 +1,5 @@
-import { Disclosure } from "@headlessui/react"
 import React, { useEffect, useState } from "react"
+import "./Navbar.css"
 
 const navigation = [
   { name: "index", href: "#index", current: true },
@@ -108,12 +108,12 @@ export default function Navbar() {
       <div
         className={`md:hidden ${menuOpen ? "block" : "hidden"} inline-block`}
       >
-        <div className="flex flex-col gap-4 pl-4 mt-4">
+        <div className="flex flex-col gap-5 pl-4 mt-4">
           {navigation?.map((item, idx) => (
             <a
               key={idx}
               href={item?.href}
-              className={`text-white ${
+              className={`text-white py-2 ${
                 activeHash === item?.href ? "border-b-2 border-white" : ""
               }`}
             >

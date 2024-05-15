@@ -7,22 +7,21 @@ import "react-vertical-timeline-component/style.min.css"
 
 import { experiences } from "../../constants/dummy_data"
 
-import { FaBook } from "react-icons/fa"
+import DynamicFAIcon from "../../utils/DynamicFAIcon"
 
 const TimelineCard = ({ item }) => {
   return (
     <VerticalTimelineElement
-      className="vertical-timeline-element--work"
       contentStyle={{
         background: "rgba(0, 0, 0, 0.8)",
-        color: "white",
-        border: "1px solid white",
+        color: "#FFF",
+        border: `3px solid ${item?.iconBg}`,
         borderRadius: "10px",
       }}
-      contentArrowStyle={{ borderRight: "10px solid rgba(255, 255, 255, 0.8" }}
+      contentArrowStyle={{ borderRight: `20px solid ${item?.iconBg}` }}
       date={item?.date}
-      iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-      icon={<FaBook />}
+      iconStyle={{ background: item?.iconBg, color: "#FFF" }}
+      icon={<DynamicFAIcon name={item?.icon} />}
     >
       <h3 className="vertical-timeline-element-title text-lg font-semibold">
         {item?.title}
@@ -40,21 +39,11 @@ const TimelineCard = ({ item }) => {
           )
         })}
       </ul>
-
-      {/* <img
-        style={{ width: "100%", height: "250px", objectFit: "cover" }}
-        className="rounded-t-lg"
-        src={item?.icon}
-        alt=""
-      /> */}
     </VerticalTimelineElement>
   )
 }
 
-const Experience = () => {
-  //   className={`min-h-screen bg-center bg-cover px-24 py-4`}
-  // >
-
+export default function Experience() {
   return (
     <section
       id="exp"
@@ -65,7 +54,7 @@ const Experience = () => {
       }}
     >
       <div className="container mx-auto">
-        <div className="text-white text-3xl font-semibold">Experience</div>
+        <div className="text-white text-3xl font-semibold">Experience </div>
 
         <VerticalTimeline>
           {experiences?.map((item, idx) => {
@@ -73,13 +62,6 @@ const Experience = () => {
           })}
         </VerticalTimeline>
       </div>
-
-      {/* <img
-        src="https://ghchart.rshah.org/02angejuice"
-        alt="Name Your Github chart"
-      /> */}
     </section>
   )
 }
-
-export default Experience

@@ -108,12 +108,16 @@ export default function Content3D({ children }) {
         {/* <h1 className="text-white text-7xl">Hello, Here I am. </h1> */}
 
         <TypeAnimation
-          className="text-white text-6xl"
+          className="text-white text-5xl"
           preRenderFirstString={true}
           sequence={[
             2000,
             "hello.",
+            5000,
+            "welcome",
             2000,
+            "glad to meet you",
+            5000,
             `i am\n`,
             2000,
             `i am\nwatcharaphong`,
@@ -121,10 +125,8 @@ export default function Content3D({ children }) {
             `you can call me`,
             2000,
             `you can call me\n"jumbo"`,
-            5000,
-            "welcome",
-            5000,
-            "happy to meet you",
+            2000,
+
             // "We produce food for Guinea Pigs",
             // 1000,
             // "We produce food for Chinchillas",
