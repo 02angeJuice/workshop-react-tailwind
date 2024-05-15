@@ -69,6 +69,7 @@ export default function About() {
               every task.
             </div>
 
+            {/*  */}
             <div className="md:col-span-6 col-span-12">
               {/* <div className="w-full md:w-auto"> */}
               {/* <div className="flex">
