@@ -154,6 +154,7 @@ export default function Content3D({ children }) {
           hover:brightness-110
           hover:-translate-y-[1px]
           hover:border-b-[6px]
+          hover:bg-lime-300
           active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
         >
           <FaArrowDown size={25} />

@@ -1,4 +1,5 @@
 import React from "react"
+import Element3D from "../components/Element3D"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -6,7 +7,9 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-4">
       <div className="container mx-auto text-center">
-        <p>Mad with love. ❤️</p>
+        {/* <Element3D /> */}
+
+        <span>Made with love. ❤️</span>
       </div>
     </footer>
   )

@@ -17,36 +17,6 @@
   scroll-behavior: smooth;
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: auto;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 8px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -30px;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
 @layer base {
   body {
     @apply font-sans bg-n-8 text-n-1 text-base;
@@ -115,4 +85,41 @@
 
 .-rotate-360 {
   @apply rotate-[-360deg];
+}
+
+/* @layer utilities {
+  .shadow-custom-white {
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.4),
+      0 4px 6px -2px rgba(255, 255, 255, 0.3);
+  }
+} */
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -30px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

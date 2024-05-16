@@ -4,25 +4,18 @@ import "./Navbar.css"
 const navigation = [
   { name: "index", href: "#index", current: true },
   { name: "my-self", href: "#about", current: false },
+  { name: "skills", href: "#skills", current: false },
   { name: "exp", href: "#exp", current: false },
+  { name: "hobbies", href: "#hobbies", current: false },
   { name: "contact", href: "#contact", current: false },
 ]
 
-export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
+export default function Navbar({ isScrolled }) {
   const [activeHash, setActiveHash] = useState("")
 
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    }
-
     const sections = document.querySelectorAll("section")
     const observerOptions = {
       root: null,
@@ -44,10 +37,7 @@ export default function Navbar() {
       observer.observe(section)
     })
 
-    window.addEventListener("scroll", handleScroll)
-
     return () => {
-      window.removeEventListener("scroll", handleScroll)
       sections.forEach((section) => {
         observer.unobserve(section)
       })
@@ -57,12 +47,17 @@ export default function Navbar() {
   return (
     <nav
       className={`transition-all p-3 fixed top-0 w-full z-50 ${
-        isScrolled ? "bg-black bg-opacity-95 shadow-lg" : "bg-transparent"
+        isScrolled
+          ? "bg-black bg-opacity-50 shadow-lg backdrop-blur-sm"
+          : "bg-transparent"
       } rounded-b-xl`}
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-white text-2xl font-semibold">
+        <a
+          href="#"
+          className="text-white text-2xl font-semibold hover:text-lime-300"
+        >
           02angejuice
         </a>
 
@@ -88,14 +83,18 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex">
-          <div className="flex space-x-4">
+          <div className="flex gap-6">
             {navigation?.map((item, idx) => (
               <a
                 key={idx}
                 href={item?.href}
-                className={`text-white ${
-                  activeHash === item?.href ? "border-b-2 border-white" : ""
-                }`}
+                className={`${
+                  activeHash === item?.href
+                    ? "border-b-2 border-white text-lime-300"
+                    : "text-white"
+                }
+                  hover:text-lime-300
+                `}
               >
                 {item?.name}
               </a>
@@ -108,14 +107,19 @@ export default function Navbar() {
       <div
         className={`md:hidden ${menuOpen ? "block" : "hidden"} inline-block`}
       >
-        <div className="flex flex-col gap-5 pl-4 mt-4">
+        <div className="flex flex-col gap-2 pl-4 mt-4">
           {navigation?.map((item, idx) => (
             <a
               key={idx}
               href={item?.href}
-              className={`text-white py-2 ${
-                activeHash === item?.href ? "border-b-2 border-white" : ""
-              }`}
+              className={`${
+                activeHash === item?.href
+                  ? "border-b-2 border-white text-lime-300"
+                  : "text-white"
+              }
+                hover:text-lime-300
+              `}
+              onClick={() => setMenuOpen(false)}
             >
               {item?.name}
             </a>

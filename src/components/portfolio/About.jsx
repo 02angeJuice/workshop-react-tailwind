@@ -24,11 +24,16 @@ const tech_stacks = [
 ]
 
 const hobbies = [
-  { name: "Travel for food and relax", src: "my-self/html.png" },
-  { name: "Learn and listen to dhamma", src: "my-self/css.png" },
+  { name: "Travel for food and relax", src: "my-self/hobbies/1.jpg" },
+  { name: "Learn and listen to dhamma", src: "my-self/hobbies/2.jpg" },
+  { name: "Read some favorite books", src: "my-self/hobbies/3.jpg" },
+  {
+    name: "Practice cooking at home with family",
+    src: "my-self/hobbies/4.jpg",
+  },
   {
     name: "Go to the countryside (Visit my mother if it's possible)",
-    src: "my-self/js.png",
+    src: "my-self/hobbies/5.jpg",
   },
 ]
 
@@ -53,92 +58,45 @@ export default function About() {
   ))
 
   return (
-    <section id="about" className="p-16">
+    <section id="about" className="py-16 bg-n-7">
       <div className="container mx-auto">
-        <div className="text-3xl font-semibold">About my self</div>
+        <div className="text-3xl font-semibold">
+          About <span className="text-lime-300 font-extrabold">my-self</span>
+        </div>
 
         {/* Overview */}
         <div className="mt-10">
           <h2 className="sectionHeadText text-2xl">Overview</h2>
 
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-6 col-span-12 text-xl">
-              Passionate about coding and continuously seeking out opportunities
-              to learn and develop new skills. Dedicated and committed to
-              delivering high-quality work, always striving for perfection in
-              every task.
+          <div className="grid space-y-5 md:space-x-5 md:grid-cols-12 mt-5">
+            <div className="md:col-span-6 lg:col-span-8 col-span-12 text-xl">
+              <p>
+                Passionate about coding and continuously seeking out
+                opportunities to learn and develop new skills. Dedicated and
+                committed to delivering high-quality work, always striving for
+                perfection in every task.
+              </p>
             </div>
 
-            <div className="md:col-span-6 col-span-12">
-              {/* <div className="w-full md:w-auto"> */}
-              {/* <div className="flex">
-                <img className="object-contain" src="my-self/profile.jpg" />
-              </div> */}
-              {/* </div> */}
-            </div>
-          </div>
-        </div>
-
-        {/* Tech Stacks */}
-        <div className="mt-10">
-          <h2 className="sectionHeadText text-2xl">My stacks used</h2>
-          <div className="flex flex-wrap gap-10 mt-5">
-            {tech_stacks?.map((item, idx) => (
-              <div key={idx} className="tooltip">
-                <img
-                  key={idx}
-                  className="h-12 w-auto hover:scale-125 transition-transform duration-3000"
-                  src={item?.src}
-                />
-                <span className="tooltiptext">{item?.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Hobbies */}
-        <div className="mt-10">
-          <h2 className="sectionHeadText text-2xl">Hobbies and interest</h2>
-          <div className="flex flex-wrap gap-10 mt-5">
-            <div id="accordionExample">
-              {hobbies?.map((item, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    className="w-full inline-block border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-body-dark"
-                  >
-                    <h2 className="mb-0" id="headingOne">
-                      <button
-                        className="group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-black [&:not([data-twe-collapse-collapsed])]:bg-white [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
-                        type="button"
-                      >
-                        {item?.name}
-                        <span className="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                            />
-                          </svg>
-                        </span>
-                      </button>
-                    </h2>
-                    <div id="collapseOne" className="!visible">
-                      <div className="px-5 py-4">{item?.src}</div>
-                    </div>
-                  </div>
-                )
-              })}
+            <div className="md:col-span-6 lg:col-span-4 col-span-12">
+              <img
+                className="
+                w-screen
+                h-[480px]
+                object-cover
+                rounded-2xl ring-4 ring-n-2
+                hover:-translate-y-2
+                hover:ring-4 
+                hover:ring-lime-300
+                hover:shadow-custom-white
+                 transition-all duration-100"
+                src="my-self/profile.jpg"
+              />
             </div>
           </div>
         </div>
+
+        {/* end */}
       </div>
     </section>
   )

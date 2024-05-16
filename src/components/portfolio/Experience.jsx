@@ -47,20 +47,25 @@ export default function Experience() {
   return (
     <section
       id="exp"
-      className="bg-gray-900 p-16 bg-center bg-cover"
+      className="py-16 bg-gray-900 bg-center bg-cover"
       style={{
         backgroundImage: "url(my-self/cover-1.jpg)",
         backgroundAttachment: "fixed",
       }}
     >
       <div className="container mx-auto">
-        <div className="text-white text-3xl font-semibold">Experience </div>
+        <div className="text-white text-3xl font-semibold">
+          <span className="text-lime-300 font-extrabold">Exp</span>erience
+          timeline
+        </div>
 
-        <VerticalTimeline>
-          {experiences?.map((item, idx) => {
-            return <TimelineCard key={idx} item={item} />
-          })}
-        </VerticalTimeline>
+        <div className="mt-10">
+          <VerticalTimeline>
+            {experiences?.map((item, idx) => {
+              return <TimelineCard key={idx} item={item} />
+            })}
+          </VerticalTimeline>
+        </div>
       </div>
     </section>
   )
