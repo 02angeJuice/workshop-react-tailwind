@@ -2,41 +2,6 @@ import React, { useState } from "react"
 import Card from "./Card"
 import { services } from "../../constants/dummy_data"
 
-const randomImages = () => {
-  return "https://source.unsplash.com/random?wallpapers"
-}
-
-let CardImage = randomImages()
-
-const tech_stacks = [
-  { name: "HTML", src: "my-self/stacks/html.png" },
-  { name: "CSS", src: "my-self/stacks/css.png" },
-  { name: "JavaScript", src: "my-self/stacks/js.png" },
-  { name: "TypeScript", src: "my-self/stacks/ts.svg" },
-  { name: "NodeJS", src: "my-self/stacks/node.svg" },
-  { name: "NestJS", src: "my-self/stacks/nestjs.png" },
-  { name: "React", src: "my-self/stacks/react.png" },
-  { name: "Redux", src: "my-self/stacks/redux.png" },
-  { name: "Prisma", src: "my-self/stacks/prisma.svg" },
-  { name: "SQL", src: "my-self/stacks/sql.png" },
-  { name: "MUI", src: "my-self/stacks/mui.svg" },
-  { name: "Tailwind", src: "my-self/stacks/tailwind.png" },
-]
-
-const hobbies = [
-  { name: "Travel for food and relax", src: "my-self/hobbies/1.jpg" },
-  { name: "Learn and listen to dhamma", src: "my-self/hobbies/2.jpg" },
-  { name: "Read some favorite books", src: "my-self/hobbies/3.jpg" },
-  {
-    name: "Practice cooking at home with family",
-    src: "my-self/hobbies/4.jpg",
-  },
-  {
-    name: "Go to the countryside (Visit my mother if it's possible)",
-    src: "my-self/hobbies/5.jpg",
-  },
-]
-
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(null)
 
@@ -70,12 +35,32 @@ export default function About() {
 
           <div className="grid space-y-5 md:space-x-5 md:grid-cols-12 mt-5">
             <div className="md:col-span-6 lg:col-span-8 col-span-12 text-xl">
-              <p>
-                Passionate about coding and continuously seeking out
-                opportunities to learn and develop new skills. Dedicated and
-                committed to delivering high-quality work, always striving for
-                perfection in every task.
-              </p>
+              <div
+                className="flex flex-col justify-between"
+                style={{ height: "100%" }}
+              >
+                <p>
+                  Passionate about coding and continuously seeking out
+                  opportunities to learn and develop new skills. Dedicated and
+                  committed to delivering high-quality work, always striving for
+                  perfection in every task.
+                </p>
+
+                <p>
+                  I' Watcharaphong sayprang <br />
+                  Jumbo
+                </p>
+
+                <div className="flex space-x-5">
+                  <button className="bg-lime-300 text-black px-6 py-2 rounded-full mt-8">
+                    Download CV
+                  </button>
+
+                  <button className="bg-sky-300 text-black px-6 py-2 rounded-full mt-8">
+                    Download Resume
+                  </button>
+                </div>
+              </div>
             </div>
 
             <div className="md:col-span-6 lg:col-span-4 col-span-12">

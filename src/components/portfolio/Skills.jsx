@@ -23,12 +23,12 @@ const hobbies = [
   //   src: "my-self/hobbies/4.jpg",
   // },
   {
-    name: "Go to the countryside (Visit my mother if it's possible)",
-    src: "my-self/hobbies/5.jpg",
+    name: "Hello, I'm Suea(Tiger)",
+    src: "my-self/hobbies/5/5.jpg",
   },
 ]
 
-export const Skills = () => {
+export default function Skills() {
   return (
     <section
       id="skills"
