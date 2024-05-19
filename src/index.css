@@ -21,6 +21,10 @@ img {
   user-select: none;
 }
 
+::selection {
+  color: #000;
+  background: #bef264;
+}
 @layer base {
   body {
     @apply font-sans bg-n-8 text-n-1 text-base;

@@ -5,9 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import DynamicFAIcon from "../../utils/DynamicFAIcon"
 
 import "swiper/css"
-import "swiper/css/free-mode"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
 
 import "./swiper.css"
+
+import { Pagination, Mousewheel, Autoplay } from "swiper/modules"
 
 export default function ImagesModal({ isOpen, images, onClose }) {
   const modalRef = useRef()
@@ -34,6 +37,13 @@ export default function ImagesModal({ isOpen, images, onClose }) {
     }
   }, [onClose])
 
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>"
+    },
+  }
+
   if (!isOpen) return null
 
   return (
@@ -58,7 +68,18 @@ export default function ImagesModal({ isOpen, images, onClose }) {
 
         <Swiper
           watchSlidesProgress={true}
-          slidesPerView={1}
+          slidesPerView="auto"
+          // centeredSlides={true}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
+          mousewheel={true}
+          pagination={{
+            dynamicBullets: true,
+            clickable: true,
+          }}
+          modules={[Pagination, Mousewheel, Autoplay]}
           spaceBetween={20}
           breakpoints={{
             776: { slidesPerView: 2, spaceBetween: 20 },

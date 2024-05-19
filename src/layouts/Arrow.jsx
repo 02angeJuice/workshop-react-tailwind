@@ -18,11 +18,9 @@ export default function Arrow({ isScrolled }) {
           transition: "all .2s ease",
           flexDirection: "row",
           alignItems: "center",
-          //   backgroundColor: "bg-lime-300",
           color: "#FFF",
-          //   padding: "2px 3px",
         }}
-        className="bg-lime-300 p-2"
+        className="bg-lime-300 p-2 rounded-lg bg-opacity-85"
         onMouseEnter={(e) => {
           e.currentTarget.style.transform = "translate(0px,-5px)"
           e.currentTarget.style.cursor = "pointer"

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Card from "./Card"
 import { services } from "../../constants/dummy_data"
+import DynamicFAIcon from "../../utils/DynamicFAIcon"
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(null)
@@ -36,7 +37,7 @@ export default function About() {
           <div className="grid space-y-5 md:space-x-5 md:grid-cols-12 mt-5">
             <div className="md:col-span-6 lg:col-span-8 col-span-12 text-xl">
               <div
-                className="flex flex-col justify-between"
+                className="flex flex-col justify-between gap-6"
                 style={{ height: "100%" }}
               >
                 <p>
@@ -46,19 +47,41 @@ export default function About() {
                   perfection in every task.
                 </p>
 
-                <p>
-                  I' Watcharaphong sayprang <br />
-                  Jumbo
+                <p className="text-5xl leading-tight">
+                  Watcharaphong <br />
+                  Sayprang
                 </p>
 
                 <div className="flex space-x-5">
-                  <button className="bg-lime-300 text-black px-6 py-2 rounded-full mt-8">
-                    Download CV
-                  </button>
+                  <a
+                    href="files/watcharaphong_cv.pdf"
+                    download
+                    className="inline-flex space-x-2 items-center text-lg text-nowrap px-6 py-2 rounded-full mt-8
+                    transition-all
+                    bg-lime-300 text-black
+                    border-b-4 border-lime-700
+                    hover:bg-lime-600
+                    hover:text-white
+                    hover:border-lime-900"
+                  >
+                    <DynamicFAIcon name="FaDownload" />
+                    <span>CV</span>
+                  </a>
 
-                  <button className="bg-sky-300 text-black px-6 py-2 rounded-full mt-8">
-                    Download Resume
-                  </button>
+                  <a
+                    href="files/watcharaphong_resume.pdf"
+                    download
+                    className="inline-flex space-x-2 items-center text-lg text-nowrap px-6 py-2 rounded-full mt-8
+                    transition-all
+                    bg-sky-300 text-black
+                    border-b-4 border-sky-700
+                    hover:bg-sky-600
+                    hover:text-white
+                    hover:border-sky-900"
+                  >
+                    <DynamicFAIcon name="FaDownload" />
+                    <span>Resume</span>
+                  </a>
                 </div>
               </div>
             </div>
