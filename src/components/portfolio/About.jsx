@@ -57,7 +57,7 @@ export default function About() {
                     href="files/watcharaphong_cv.pdf"
                     download
                     className="inline-flex space-x-2 items-center text-lg text-nowrap px-6 py-2 rounded-full mt-8
-                    transition-all
+                    transition-all duration-75
                     bg-lime-300 text-black
                     border-b-4 border-lime-700
                     hover:bg-lime-600
@@ -72,7 +72,7 @@ export default function About() {
                     href="files/watcharaphong_resume.pdf"
                     download
                     className="inline-flex space-x-2 items-center text-lg text-nowrap px-6 py-2 rounded-full mt-8
-                    transition-all
+                    transition-all duration-75
                     bg-sky-300 text-black
                     border-b-4 border-sky-700
                     hover:bg-sky-600

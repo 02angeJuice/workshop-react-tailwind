@@ -10,7 +10,7 @@ import "swiper/css/navigation"
 
 import "./swiper.css"
 
-import { Pagination, Mousewheel, Autoplay } from "swiper/modules"
+import { Pagination, Mousewheel, Autoplay, Keyboard } from "swiper/modules"
 
 export default function ImagesModal({ isOpen, images, onClose }) {
   const modalRef = useRef()
@@ -55,21 +55,10 @@ export default function ImagesModal({ isOpen, images, onClose }) {
         <button className="absolute top-10 right-5 z-50" onClick={onClose}>
           <DynamicFAIcon name="FaTimes" color="#FFF" size={30} />
         </button>
-        {/* <div className="flex overflow-x-auto py-4 space-x-2">
-          {images?.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt="Preview"
-              className="rounded h-auto max-h-[80vh]  object-contain"
-            />
-          ))}
-        </div> */}
 
         <Swiper
           watchSlidesProgress={true}
           slidesPerView="auto"
-          // centeredSlides={true}
           autoplay={{
             delay: 1500,
             disableOnInteraction: false,
@@ -79,7 +68,11 @@ export default function ImagesModal({ isOpen, images, onClose }) {
             dynamicBullets: true,
             clickable: true,
           }}
-          modules={[Pagination, Mousewheel, Autoplay]}
+          keyboard={{
+            enabled: true,
+            onlyInViewport: false,
+          }}
+          modules={[Pagination, Mousewheel, Autoplay, Keyboard]}
           spaceBetween={20}
           breakpoints={{
             776: { slidesPerView: 2, spaceBetween: 20 },

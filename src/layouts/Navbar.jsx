@@ -54,11 +54,12 @@ export default function Navbar({ isScrolled }) {
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <a
-          href="#"
-          className="text-white text-2xl font-semibold hover:text-lime-300"
-        >
-          02angejuice
+        <a href="#">
+          <img
+            className="h-auto max-w-12 grayscale hover:grayscale-0"
+            src="logo.png"
+            alt="logo"
+          />
         </a>
 
         {/* Hamburger */}

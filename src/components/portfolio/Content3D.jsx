@@ -148,9 +148,8 @@ export default function Content3D({ children }) {
       >
         <a
           href="#about"
-          className="cursor-pointer transition-all bg-white text-black px-6 py-3 rounded-full
-          border-gray-600 inline-block mr-4 
-          border-b-[4px] 
+          className="cursor-pointer bg-white text-black px-4 py-3 rounded-full border-b-[4px] border-gray-600 inline-flex
+          transition-all duration-75
           hover:brightness-110
           hover:-translate-y-[1px]
           hover:border-b-[6px]
