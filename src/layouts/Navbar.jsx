@@ -56,7 +56,7 @@ export default function Navbar({ isScrolled }) {
         {/* Logo */}
         <a href="#">
           <img
-            className="h-auto max-w-12 grayscale hover:grayscale-0"
+            className="h-auto max-w-9 grayscale hover:grayscale-0"
             src="logo.png"
             alt="logo"
           />

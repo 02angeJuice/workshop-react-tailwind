@@ -60,3 +60,18 @@ export const experiences = [
     ],
   },
 ]
+
+export const tech_stacks = [
+  { name: "HTML", src: "my-self/stacks/html.png" },
+  { name: "CSS", src: "my-self/stacks/css.png" },
+  { name: "JavaScript", src: "my-self/stacks/js.png" },
+  { name: "TypeScript", src: "my-self/stacks/ts.svg" },
+  { name: "NodeJS", src: "my-self/stacks/node.svg" },
+  { name: "NestJS", src: "my-self/stacks/nestjs.png" },
+  { name: "React", src: "my-self/stacks/react.png" },
+  { name: "Redux", src: "my-self/stacks/redux.png" },
+  { name: "Prisma", src: "my-self/stacks/prisma.svg" },
+  { name: "SQL", src: "my-self/stacks/sql.png" },
+  { name: "MUI", src: "my-self/stacks/mui.svg" },
+  { name: "Tailwind", src: "my-self/stacks/tailwind.png" },
+]
