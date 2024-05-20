@@ -54,9 +54,15 @@ export default function Experience() {
       }}
     >
       <div className="container mx-auto">
-        <div className="text-white text-3xl font-semibold">
-          <span className="text-lime-300 font-extrabold">Exp</span>erience
-          timeline
+        <div className="flex justify-between">
+          <div className="text-white text-3xl font-semibold">
+            <span className="text-lime-300 font-extrabold">Exp</span>erience
+            timeline
+          </div>
+
+          <div className="text-3xl font-semibold hover:text-yellow-300">
+            <DynamicFAIcon name="FaRocket" />
+          </div>
         </div>
 
         <div className="mt-10">

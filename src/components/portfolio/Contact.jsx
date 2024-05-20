@@ -1,4 +1,5 @@
 import React from "react"
+import DynamicFAIcon from "../../utils/DynamicFAIcon"
 
 export default function Contact() {
   return (
@@ -11,10 +12,17 @@ export default function Contact() {
       }}
     >
       <div className="container mx-auto">
-        <div className="text-3xl font-semibold">
-          Let's<span className="text-lime-300 font-extrabold"> contact</span> to
-          me
+        <div className="flex justify-between">
+          <div className="text-3xl font-semibold">
+            Let's<span className="text-lime-300 font-extrabold"> contact</span>{" "}
+            to me
+          </div>
+          <div className="text-3xl font-semibold hover:text-yellow-300">
+            <DynamicFAIcon name="FaTelegramPlane" />
+          </div>
         </div>
+
+        <div className="h-[50vh]"></div>
 
         {/* <h2 className="text-3xl font-semibold">Contact</h2>
         <p className=" text-lg mt-4">

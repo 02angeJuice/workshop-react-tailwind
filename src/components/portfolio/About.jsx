@@ -26,8 +26,14 @@ export default function About() {
   return (
     <section id="about" className="py-16 bg-n-7">
       <div className="container mx-auto">
-        <div className="text-3xl font-semibold">
-          About <span className="text-lime-300 font-extrabold">my-self</span>
+        <div className="flex justify-between">
+          <div className="text-3xl font-semibold">
+            About <span className="text-lime-300 font-extrabold">my-self</span>
+          </div>
+
+          <div className="text-3xl font-semibold hover:text-yellow-300">
+            <DynamicFAIcon name="FaSeedling" />
+          </div>
         </div>
 
         {/* Overview */}

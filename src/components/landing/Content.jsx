@@ -2,7 +2,7 @@ import React from "react"
 
 const Content = () => {
   return (
-    <div className="flex">
+    <div className="flex justify-between">
       <div className="text-white mt-48 max-w-xl">
         <h1 className="text-6xl font-semibold leading-normal">
           Groceries <br />
@@ -44,12 +44,11 @@ const Content = () => {
         </div>
       </div>
 
-      <div>
+      <div className="">
         <img
-          className="w-full"
+          className="w-full max-h-3"
           src="images/grocery-image.png"
-          alt=""
-          srcset=""
+          alt="cover"
         />
       </div>
     </div>

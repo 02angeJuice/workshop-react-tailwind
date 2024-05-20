@@ -49,7 +49,7 @@ export const experiences = [
   },
   {
     title: "General Worker",
-    company_name: "Karnjana Tailor Shop",
+    company_name: "Kanjana Tailor Shop",
     location: "Khan Na Yao, Bangkok",
     iconBg: "#50C4ED",
     icon: "FaTshirt",
@@ -74,4 +74,5 @@ export const tech_stacks = [
   { name: "SQL", src: "my-self/stacks/sql.png" },
   { name: "MUI", src: "my-self/stacks/mui.svg" },
   { name: "Tailwind", src: "my-self/stacks/tailwind.png" },
+  { name: "Vite", src: "my-self/stacks/vite.png" },
 ]

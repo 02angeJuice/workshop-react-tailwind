@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import ImagesModal from "../Modal/ImagesModal"
+import DynamicFAIcon from "../../utils/DynamicFAIcon"
 
 const hobbies = [
   {
@@ -90,9 +91,14 @@ export default function Hobbies() {
       <ImagesModal isOpen={isOpen} images={images} onClose={closeModal} />
 
       <div className="container mx-auto">
-        <div className="text-3xl font-semibold">
-          <span className="text-lime-300 font-extrabold">Hobbies</span> and
-          interests
+        <div className="flex justify-between">
+          <div className="text-3xl font-semibold">
+            <span className="text-lime-300 font-extrabold">Hobbies</span> and
+            interests
+          </div>
+          <div className="text-3xl font-semibold hover:text-yellow-300">
+            <DynamicFAIcon name="FaPizzaSlice" />
+          </div>
         </div>
 
         {/* Hobbies */}
