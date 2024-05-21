@@ -31,7 +31,17 @@ export default function About() {
             About <span className="text-lime-300 font-extrabold">my-self</span>
           </div>
 
-          <div className="text-3xl font-semibold hover:text-yellow-300">
+          <div
+            className="text-3xl font-semibold relative
+            hover:text-amber-200
+            hover:before:content-['']
+            hover:before:absolute
+            hover:before:inset-0
+            hover:before:bg-amber-200
+            hover:before:opacity-50
+            hover:before:rounded-full
+            hover:before:blur-xl"
+          >
             <DynamicFAIcon name="FaSeedling" />
           </div>
         </div>

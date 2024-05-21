@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import ImagesModal from "../Modal/ImagesModal"
+import React, { useContext, useEffect, useState } from "react"
 import DynamicFAIcon from "../../utils/DynamicFAIcon"
+import { ImagesModalContext } from "../../contexts"
 
 const hobbies = [
   {
@@ -26,15 +26,6 @@ const hobbies = [
       "my-self/hobbies/1/17.jpg",
       "my-self/hobbies/1/18.jpg",
     ],
-  },
-  {
-    name: "Learn and listen to dhamma",
-    thumbnail: "my-self/hobbies/2/thumbnail.jpg",
-  },
-  {
-    name: "Read some favorite books",
-    thumbnail: "my-self/hobbies/3/thumbnail.jpg",
-    images: [],
   },
   {
     name: "Practice cooking at home with family",
@@ -69,43 +60,47 @@ const hobbies = [
       "my-self/hobbies/5/10.jpg",
     ],
   },
+  {
+    name: "Learn and listen to dhamma",
+    thumbnail: "my-self/hobbies/2/thumbnail.jpg",
+  },
+  {
+    name: "Read some favorite books",
+    thumbnail: "my-self/hobbies/3/thumbnail.jpg",
+    images: [],
+  },
 ]
 
 export default function Hobbies() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [images, setImages] = useState([])
-
-  const openModal = (images) => {
-    setImages(images)
-    setIsOpen(true)
-  }
-
-  const closeModal = () => {
-    setIsOpen(false)
-    setImages([])
-  }
+  const { openModal } = useContext(ImagesModalContext)
 
   return (
-    <section id="hobbies" className="py-16">
-      {/* Modal */}
-      <ImagesModal isOpen={isOpen} images={images} onClose={closeModal} />
-
+    <section id="hobbies" className={`py-16 `}>
       <div className="container mx-auto">
         <div className="flex justify-between">
           <div className="text-3xl font-semibold">
             <span className="text-lime-300 font-extrabold">Hobbies</span> and
             interests
           </div>
-          <div className="text-3xl font-semibold hover:text-yellow-300">
+          <div
+            className="text-3xl font-semibold relative
+            hover:text-amber-200
+            hover:before:content-['']
+            hover:before:absolute
+            hover:before:inset-0
+            hover:before:bg-amber-200
+            hover:before:opacity-50
+            hover:before:rounded-full
+            hover:before:blur-xl"
+          >
             <DynamicFAIcon name="FaPizzaSlice" />
           </div>
         </div>
 
+        <h2 className="mt-5 text-2xl">"go with the flow of nature"</h2>
+
         {/* Hobbies */}
         <div className="mt-10">
-          <h2 className="sectionHeadText text-2xl">
-            "go with the flow of nature"
-          </h2>
           <div className="grid grid-cols-12 gap-5 mt-5">
             {hobbies?.map((item, idx) => {
               const isHasImages = item?.images?.length > 0
@@ -126,12 +121,16 @@ export default function Hobbies() {
                     className="bg-n-6 rounded-lg shadow-lg overflow-hidden flex flex-col 
                     hover:ring-4
                     hover:ring-lime-300
-                    hover:text-lime-400
-                    hover:bg-n-9 "
+                    hover:text-lime-200
+                    hover:bg-n-7
+                    hover:shadow-lg hover:shadow-lime-100
+                    group"
                   >
                     <div className="h-60 overflow-hidden">
                       <img
-                        className="w-full h-full object-cover hover:scale-110 transition-all duration-200"
+                        className="w-full h-full object-cover
+                        transition-all duration-200
+                        group-hover:scale-110"
                         src={item?.thumbnail}
                         alt={item?.name}
                       />

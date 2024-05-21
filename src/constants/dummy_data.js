@@ -70,7 +70,7 @@ export const tech_stacks = [
   { name: "NestJS", src: "my-self/stacks/nestjs.png" },
   { name: "React", src: "my-self/stacks/react.png" },
   { name: "Redux", src: "my-self/stacks/redux.png" },
-  { name: "Prisma", src: "my-self/stacks/prisma.svg" },
+  { name: "Prisma", src: "my-self/stacks/prisma-2.svg" },
   { name: "SQL", src: "my-self/stacks/sql.png" },
   { name: "MUI", src: "my-self/stacks/mui.svg" },
   { name: "Tailwind", src: "my-self/stacks/tailwind.png" },

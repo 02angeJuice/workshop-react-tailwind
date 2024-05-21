@@ -11,10 +11,16 @@
   --font-code: "Source Code Pro", monospace;
   --font-grotesk: "Space Grotesk", sans-serif;
   color-scheme: dark;
+
+  --primary: transparent;
+  --secondary: #d9f99d;
 }
 
 * {
   scroll-behavior: smooth;
+
+  /* scrollbar-width: thin; */
+  scrollbar-color: var(--secondary) var(--primary);
 }
 
 img {

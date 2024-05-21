@@ -5,32 +5,17 @@ export default function Arrow({ isScrolled }) {
   return (
     <a
       href="#"
-      style={{
-        position: "fixed",
-        bottom: "30px",
-        right: "30px",
-        zIndex: 5,
-      }}
+      className={`${
+        isScrolled ? "fixed" : "hidden"
+      } bottom-5 right-5 bg-transparent ring-2 ring-lime-300 text-white p-2 rounded-md opacity-50
+      transition-all duration-100
+      hover:-translate-y-1
+      hover:ring-lime-400
+      hover:text-black
+      hover:bg-lime-300
+      hover:opacity-100`}
     >
-      <div
-        style={{
-          display: isScrolled ? "flex" : "none",
-          transition: "all .2s ease",
-          flexDirection: "row",
-          alignItems: "center",
-          color: "#FFF",
-        }}
-        className="bg-lime-300 p-2 rounded-lg bg-opacity-85"
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translate(0px,-5px)"
-          e.currentTarget.style.cursor = "pointer"
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "scale(1)"
-        }}
-      >
-        <DynamicFAIcon name="FaArrowUp" size={30} />
-      </div>
+      <DynamicFAIcon name="FaArrowUp" size="20" />
     </a>
   )
 }

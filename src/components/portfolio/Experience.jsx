@@ -59,8 +59,17 @@ export default function Experience() {
             <span className="text-lime-300 font-extrabold">Exp</span>erience
             timeline
           </div>
-
-          <div className="text-3xl font-semibold hover:text-yellow-300">
+          <div
+            className="text-3xl font-semibold relative
+            hover:text-amber-200
+            hover:before:content-['']
+            hover:before:absolute
+            hover:before:inset-0
+            hover:before:bg-amber-200
+            hover:before:opacity-50
+            hover:before:rounded-full
+            hover:before:blur-xl"
+          >
             <DynamicFAIcon name="FaRocket" />
           </div>
         </div>

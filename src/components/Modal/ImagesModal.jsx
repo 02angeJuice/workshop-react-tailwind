@@ -16,6 +16,21 @@ export default function ImagesModal({ isOpen, images, onClose }) {
   const modalRef = useRef()
 
   useEffect(() => {
+    if (isOpen) {
+      // document.body.style.filter = "blur(5px)"
+      document.body.style.overflow = "hidden"
+    } else {
+      // document.body.style.filter = "none"
+      document.body.style.overflow = "auto"
+    }
+
+    return () => {
+      // document.body.style.filter = "none"
+      document.body.style.overflow = "auto"
+    }
+  }, [isOpen])
+
+  useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         onClose()
@@ -37,20 +52,13 @@ export default function ImagesModal({ isOpen, images, onClose }) {
     }
   }, [onClose])
 
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>"
-    },
-  }
-
   if (!isOpen) return null
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
       <div
         ref={modalRef}
-        className="p-4 rounded max-h-full max-w-full w-auto flex flex-col"
+        className="p-4 rounded max-h-full w-full flex flex-col"
       >
         <button className="absolute top-10 right-5 z-50" onClick={onClose}>
           <DynamicFAIcon name="FaTimes" color="#FFF" size={30} />
@@ -78,6 +86,7 @@ export default function ImagesModal({ isOpen, images, onClose }) {
             776: { slidesPerView: 2, spaceBetween: 20 },
             1100: { slidesPerView: 3, spaceBetween: 20 },
             1500: { slidesPerView: 4, spaceBetween: 20 },
+            2000: { slidesPerView: 5, spaceBetween: 20 },
           }}
           className="mySwiper"
         >
@@ -88,7 +97,7 @@ export default function ImagesModal({ isOpen, images, onClose }) {
                   key={index}
                   src={src}
                   alt="Preview"
-                  className="rounded-xl h-auto max-h-[80vh] object-contain"
+                  className="rounded-xl w-auto h-[90vh] object-contain"
                 />
               </div>
             </SwiperSlide>
