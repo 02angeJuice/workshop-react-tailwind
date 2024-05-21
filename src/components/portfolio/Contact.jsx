@@ -1,5 +1,6 @@
 import React from "react"
 import DynamicFAIcon from "../../utils/DynamicFAIcon"
+import TopicSection from "../Fragments/TopicSection"
 
 export default function Contact() {
   return (
@@ -12,25 +13,11 @@ export default function Contact() {
       }}
     >
       <div className="container mx-auto">
-        <div className="flex justify-between">
-          <div className="text-3xl font-semibold">
-            Let's<span className="text-lime-300 font-extrabold"> contact</span>{" "}
-            to me
-          </div>
-          <div
-            className="text-3xl font-semibold relative
-            hover:text-amber-200
-            hover:before:content-['']
-            hover:before:absolute
-            hover:before:inset-0
-            hover:before:bg-amber-200
-            hover:before:opacity-50
-            hover:before:rounded-full
-            hover:before:blur-xl"
-          >
-            <DynamicFAIcon name="FaPaperPlane" />
-          </div>
-        </div>
+        <TopicSection id="contact" obsName="observe" iconName="FaPaperPlane">
+          Let's&nbsp;
+          <span className=" text-lime-200 font-extrabold">contact</span>
+          &nbsp;to me
+        </TopicSection>
 
         <div className="h-[50vh]"></div>
 

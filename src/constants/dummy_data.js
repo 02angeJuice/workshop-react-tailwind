@@ -1,17 +1,4 @@
-export const services = [
-  {
-    title: "Web Developer",
-    image: "https://source.unsplash.com/random?wallpapers",
-  },
-  {
-    title: "Web GIS",
-    image: "https://source.unsplash.com/random?wallpapers",
-  },
-  {
-    title: "Backend Developer",
-    image: "https://source.unsplash.com/random?wallpapers",
-  },
-]
+// Experiences
 export const experiences = [
   {
     title: "Programmer",
@@ -58,6 +45,114 @@ export const experiences = [
       `+ Laying fabric from fabric rolls, layer by layer, to prepare for fabric pattern layout, and using a cutting machine.`,
       `+ Handing fabric pieces to seamstresses for assembly, packaging finished products, and delivering them to customers.`,
     ],
+  },
+]
+
+// Skills
+export const works = [
+  {
+    title: "Booking Resort & Ticket",
+    description:
+      "A website for booking hotels and tickets to attractions, offering various interesting information.",
+    thumbnail: "works/resort/thumbnail.png",
+    tags: ["React", "Zustand", "MUI", "NestJS", "SQL"],
+    images: [],
+    link_github: null,
+    link_web: "https://www.nongnooch.io/nongnooch-resort/home",
+    category: ["MOBILE", "REACT"],
+  },
+  {
+    title: "Digital Assets",
+    description:
+      "A website for collecting digital assets, enabling auctions and trading, with Omise as the payment gateway.",
+    thumbnail: "works/digital-assets/thumbnail.png",
+    tags: ["React", "Redux", "MUI", "NestJS", "SQL"],
+    images: [],
+    link_github: null,
+    link_web: "https://www.nongnooch.io/Nongnooch(NDA)/home",
+    category: "REACT",
+  },
+  {
+    title: "Pics Search",
+    description:
+      "A website for searching various images, integrated with the Unsplash API.",
+    thumbnail: "works/pics-search/thumbnail.png",
+    images: [],
+    tags: ["React"],
+    link_github: "https://github.com/02angeJuice/pics-search",
+    link_web: "https://pics-search-api.netlify.app/",
+    category: "REACT",
+  },
+  {
+    title: "The Burger",
+    description:
+      "A website for simulating order placement and creating burgers simultaneously.",
+    thumbnail: "works/burger/thumbnail.png",
+    images: [],
+    tags: ["React", "Redux"],
+    link_github: "https://github.com/02angeJuice/the-burger-remake",
+    link_web: "https://the-burger-remake.netlify.app",
+    category: "REACT",
+  },
+  {
+    title: "Grocify Homepage",
+    description: "A homepage designed for a grocery store website.",
+    thumbnail: "works/grocify-home/thumbnail.png",
+    images: [],
+    tags: ["React", "Tailwind"],
+    link_github: "https://github.com/02angeJuice/workshop-grocery-tailwind",
+    link_web: "https://grocery-hompage.netlify.app",
+    category: "REACT",
+  },
+  {
+    title: "Landing Homepage",
+    description: "A simple landing page.",
+    thumbnail: "works/starter-landing/thumbnail.png",
+    images: [],
+    tags: ["React", "Tailwind"],
+    link_github: "https://github.com/02angeJuice/workshop-landing-tailwind",
+    link_web: "https://starter-landing-homepage.netlify.app",
+    category: "REACT",
+  },
+  {
+    title: "Handheld Express App",
+    description:
+      "A mobile app for handheld devices used in parcel management through barcode scanning.",
+    thumbnail: "works/express/thumbnail.jpg",
+    images: [
+      "works/express/1.jpg",
+      "works/express/2.jpg",
+      "works/express/3.jpg",
+      "works/express/4.jpg",
+      "works/express/5.jpg",
+      "works/express/6.jpg",
+      "works/express/7.jpg",
+    ],
+    tags: ["React Native", "Redux", "NestJS", "SQL"],
+    link_github: null,
+    link_web: null,
+    category: ["MOBILE"],
+  },
+  {
+    title: "Auto Delete Todo",
+    description: "Simple todo list with auto delete feature",
+    thumbnail: "works/todo/thumbnail.png",
+    images: [],
+    tags: ["React", "Zustand", "MUI"],
+    link_github: "https://github.com/02angeJuice/todo-list",
+    link_web: "https://auto-todo-list.netlify.app",
+    category: "REACT",
+  },
+
+  {
+    title: "Form Validation",
+    description: "Form validation with React and Redux",
+    thumbnail: "works/form-validation/thumbnail.png",
+    images: [],
+    tags: ["React", "Redux", "Tailwind"],
+    link_github: "https://github.com/02angeJuice/practice_2",
+    link_web: "https://demo-form-validation.netlify.app/",
+    category: "REACT",
   },
 ]
 

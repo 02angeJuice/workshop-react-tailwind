@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import "./Navbar.css"
+import { NavObserverContext } from "../contexts"
 
 const navigation = [
   { name: "index", href: "#index", current: true },
@@ -11,38 +12,9 @@ const navigation = [
 ]
 
 export default function Navbar({ isScrolled }) {
-  const [activeHash, setActiveHash] = useState("")
+  const { activeHash } = useContext(NavObserverContext)
 
   const [menuOpen, setMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const sections = document.querySelectorAll("section")
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-    }
-
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveHash(`#${entry.target.id}`)
-        }
-      })
-    }
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions)
-
-    sections.forEach((section) => {
-      observer.observe(section)
-    })
-
-    return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section)
-      })
-    }
-  }, [])
 
   return (
     <nav

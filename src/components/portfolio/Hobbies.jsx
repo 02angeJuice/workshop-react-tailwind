@@ -1,6 +1,7 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext } from "react"
 import DynamicFAIcon from "../../utils/DynamicFAIcon"
 import { ImagesModalContext } from "../../contexts"
+import TopicSection from "../Fragments/TopicSection"
 
 const hobbies = [
   {
@@ -75,27 +76,12 @@ export default function Hobbies() {
   const { openModal } = useContext(ImagesModalContext)
 
   return (
-    <section id="hobbies" className={`py-16 `}>
+    <section id="hobbies" className="py-16">
       <div className="container mx-auto">
-        <div className="flex justify-between">
-          <div className="text-3xl font-semibold">
-            <span className="text-lime-300 font-extrabold">Hobbies</span> and
-            interests
-          </div>
-          <div
-            className="text-3xl font-semibold relative
-            hover:text-amber-200
-            hover:before:content-['']
-            hover:before:absolute
-            hover:before:inset-0
-            hover:before:bg-amber-200
-            hover:before:opacity-50
-            hover:before:rounded-full
-            hover:before:blur-xl"
-          >
-            <DynamicFAIcon name="FaPizzaSlice" />
-          </div>
-        </div>
+        <TopicSection id="hobbies" obsName="observe" iconName="FaPizzaSlice">
+          <span className="text-lime-200 font-extrabold">Hobbies</span>
+          &nbsp;and interests
+        </TopicSection>
 
         <h2 className="mt-5 text-2xl">"go with the flow of nature"</h2>
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -8,6 +8,7 @@ import "react-vertical-timeline-component/style.min.css"
 import { experiences } from "../../constants/dummy_data"
 
 import DynamicFAIcon from "../../utils/DynamicFAIcon"
+import TopicSection from "../Fragments/TopicSection"
 
 const TimelineCard = ({ item }) => {
   return (
@@ -54,25 +55,10 @@ export default function Experience() {
       }}
     >
       <div className="container mx-auto">
-        <div className="flex justify-between">
-          <div className="text-white text-3xl font-semibold">
-            <span className="text-lime-300 font-extrabold">Exp</span>erience
-            timeline
-          </div>
-          <div
-            className="text-3xl font-semibold relative
-            hover:text-amber-200
-            hover:before:content-['']
-            hover:before:absolute
-            hover:before:inset-0
-            hover:before:bg-amber-200
-            hover:before:opacity-50
-            hover:before:rounded-full
-            hover:before:blur-xl"
-          >
-            <DynamicFAIcon name="FaRocket" />
-          </div>
-        </div>
+        <TopicSection id="exp" obsName="observe" iconName="FaRocket">
+          <span className="text-lime-200 font-extrabold">Exp</span>
+          erience timeline
+        </TopicSection>
 
         <div className="mt-10">
           <VerticalTimeline>

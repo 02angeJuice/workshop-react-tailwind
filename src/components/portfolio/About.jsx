@@ -1,50 +1,16 @@
-import React, { useState } from "react"
-import Card from "./Card"
-import { services } from "../../constants/dummy_data"
+import React from "react"
+
 import DynamicFAIcon from "../../utils/DynamicFAIcon"
+import TopicSection from "../Fragments/TopicSection"
 
 export default function About() {
-  const [activeIndex, setActiveIndex] = useState(null)
-
-  const [tooltipContent, setTooltipContent] = useState("")
-  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 })
-  const handleShowTooltip = (content, event, index) => {
-    setTooltipContent(content)
-    setTooltipPosition({ x: event.clientX, y: event.clientY })
-    setActiveIndex(index)
-  }
-
-  const handleHideTooltip = () => {
-    setTooltipContent("")
-    setActiveIndex(null)
-  }
-
-  const skills = services?.map((item, idx) => (
-    <Card key={idx} title={item.title} image={item.image} />
-  ))
-
   return (
     <section id="about" className="py-16 bg-n-7">
       <div className="container mx-auto">
-        <div className="flex justify-between">
-          <div className="text-3xl font-semibold">
-            About <span className="text-lime-300 font-extrabold">my-self</span>
-          </div>
-
-          <div
-            className="text-3xl font-semibold relative
-            hover:text-amber-200
-            hover:before:content-['']
-            hover:before:absolute
-            hover:before:inset-0
-            hover:before:bg-amber-200
-            hover:before:opacity-50
-            hover:before:rounded-full
-            hover:before:blur-xl"
-          >
-            <DynamicFAIcon name="FaSeedling" />
-          </div>
-        </div>
+        <TopicSection id="about" obsName="observe" iconName="FaSeedling">
+          About&nbsp;
+          <span className="text-lime-200 font-extrabold">my-self</span>
+        </TopicSection>
 
         {/* Overview */}
         <div className="mt-10">

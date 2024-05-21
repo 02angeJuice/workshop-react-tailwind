@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef, useEffect } from "react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { useGLTF, OrbitControls, Line } from "@react-three/drei"
 import { AnimationMixer } from "three"
@@ -53,7 +53,7 @@ const Controls = () => {
   )
 }
 
-export default function Content3D({ children }) {
+export default function Content3D({}) {
   return (
     <section
       id="index"
@@ -64,6 +64,8 @@ export default function Content3D({ children }) {
         position: "relative",
       }}
     >
+      <div id="index" className="observe" />
+
       <Canvas>
         {/* Uncomment if you want to display lines */}
         {/* <Line
