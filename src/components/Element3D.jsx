@@ -4,7 +4,7 @@ import { useGLTF, OrbitControls, Line } from "@react-three/drei"
 import { AnimationMixer } from "three"
 
 const Model = () => {
-  const { scene, animations } = useGLTF("./models/lucky-cat/scene.gltf")
+  const { scene, animations } = useGLTF("./models/computer/scene.gltf")
   const mixer = useRef()
 
   useEffect(() => {
@@ -20,8 +20,8 @@ const Model = () => {
     mixer.current?.update(delta)
   })
 
-  // return <primitive position={[5, 0, 0]} scale={1} object={scene} />
-  return <primitive position={[0, -2, 0]} scale={0.1} object={scene} />
+  return <primitive position={[0, -2, 0]} scale={3} object={scene} />
+  // return <primitive position={[0, 0, 0]} scale={2} object={scene} />
 }
 
 const Controls = () => {
@@ -53,14 +53,14 @@ const Controls = () => {
 export default function Element3D({ children }) {
   return (
     <span
-      className="inline-block"
+      className="w-auto h-auto"
       //   id="index"
-      //   style={{
-      //     height: "100vh",
-      //     width: "100%",
-      //     backgroundColor: "#000",
-      //     position: "relative",
-      //   }}
+      // style={{
+      //   height: "100%",
+      //   width: "100%",
+      //   // backgroundColor: "#000",
+      //   // position: "relative",
+      // }}
     >
       <Canvas>
         {/* Uncomment if you want to display lines */}

@@ -20,7 +20,7 @@ export default function TopicSection({ id, obsName, iconName, children }) {
           hover:before:opacity-50
           hover:before:rounded-full
           hover:before:blur-xl
-          
+          hover:-translate-y-1
           
           `}
       >

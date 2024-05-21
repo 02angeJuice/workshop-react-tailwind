@@ -151,12 +151,14 @@ export default function Content3D({}) {
         <a
           href="#about"
           className="cursor-pointer bg-white text-black px-4 py-3 rounded-full border-b-[4px] border-gray-600 inline-flex
-          transition-all duration-75
+          transition-all duration-75 ease-out
           hover:brightness-110
           hover:-translate-y-[1px]
           hover:border-b-[6px]
           hover:bg-lime-300
-          active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+          active:border-b-[2px] 
+          active:brightness-90 
+          active:translate-y-[2px]"
         >
           <FaArrowDown size={25} />
         </a>

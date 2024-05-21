@@ -10,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        custom: "5px 5px black",
+      },
       colors: {
         color: {
           1: "#AC6AFF",

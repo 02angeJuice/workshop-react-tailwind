@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react"
+import IconLinkSkill from "../Fragments/IconLinkSkill"
 import { ImagesModalContext } from "../../contexts"
 
-import DynamicFAIcon from "../../utils/DynamicFAIcon"
 import TopicSection from "../Fragments/TopicSection"
 import { tech_stacks, works } from "../../constants/dummy_data"
-import IconLinkSkill from "../Fragments/IconLinkSkill"
 
 const filter = [
   { title: "All", category: "ALL" },
@@ -97,7 +96,8 @@ export default function Skills() {
                         <blockquote>
                           <p
                             className="text-lg font-medium
-                          group-hover:text-lime-200"
+                      
+                          "
                           >
                             {item?.title}
                           </p>
@@ -111,28 +111,34 @@ export default function Skills() {
                     {/* Tags */}
                     <div className="space-y-2 ">
                       <div className="flex space-x-2 justify-start">
-                        {item?.images?.length > 0 && (
+                        {item?.images?.length > 0 ? (
                           <IconLinkSkill
                             iconName="FaPhotoVideo"
-                            color="yellow"
+                            color="red"
                             open={() => openModal(item?.images)}
                           />
+                        ) : (
+                          ""
                         )}
 
-                        {item?.link_github && (
+                        {item?.link_github ? (
                           <IconLinkSkill
                             iconName="FaGithubAlt"
                             color="lime"
                             link={item?.link_github}
                           />
+                        ) : (
+                          ""
                         )}
 
-                        {item?.link_web && (
+                        {item?.link_web ? (
                           <IconLinkSkill
                             iconName="FaGlobeAsia"
                             color="sky"
                             link={item?.link_web}
                           />
+                        ) : (
+                          ""
                         )}
                       </div>
 
