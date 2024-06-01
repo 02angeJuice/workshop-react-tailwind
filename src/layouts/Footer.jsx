@@ -1,5 +1,4 @@
 import React from "react"
-import Element3D from "../components/Element3D"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -7,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-4">
       <div className="container mx-auto text-center flex space-x-3 justify-center items-center">
-        <span className="inline-block">Made with love. ❤️</span>
+        <span className="inline-block">Made with love. ❤️ {currentYear}</span>
         <span>|</span>
         <div className="flex space-x-2">
           <img className="h-5 w-auto" src="my-self/stacks/react.png" alt="" />
