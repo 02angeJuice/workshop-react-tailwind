@@ -75,12 +75,12 @@ export default function Contact() {
 
           <form id="hook-form" onSubmit={handleSubmit(sendEmail)}>
             <div className="mt-10 rounded-xl">
-              <div className="grid grid-cols-12">
-                <div className="col-span-12 lg:col-span-8 p-6 flex flex-col gap-7">
+              <div className="grid grid-cols-12 gap-2">
+                <div className="col-span-12 lg:col-span-8 flex flex-col gap-4">
                   <div>
                     <input
                       className={`w-full h-10 rounded-md outline-none text-n-7 text-xl font-semibold px-4 py-6
-                    ring-4 ring-n-4 bg-n-1 shadow-black shadow-lg
+                    ring-2 ring-n-4 bg-n-1 shadow-black shadow-lg
                     focus:ring-sky-500
                     ${errors?.name ? "ring-red-500" : ""}
                     `}
@@ -96,7 +96,7 @@ export default function Contact() {
                   <div>
                     <input
                       className={`w-full h-10 rounded-md outline-none  text-n-7 text-xl font-semibold px-4 py-6
-                    ring-4 ring-n-4 bg-n-1 shadow-black shadow-lg
+                    ring-2 ring-n-4 bg-n-1 shadow-black shadow-lg
                     focus:ring-sky-500
                     ${errors?.email ? "ring-red-500" : ""}
                     `}
@@ -112,7 +112,7 @@ export default function Contact() {
                   <div>
                     <textarea
                       className={`w-full rounded-md outline-none  text-n-7 text-xl font-semibold px-4 py-6
-                      ring-4 ring-n-4 bg-n-1 shadow-black shadow-lg
+                      ring-2 ring-n-4 bg-n-1 shadow-black shadow-lg
                       focus:ring-sky-500
                       ${errors?.message ? "ring-red-500" : ""}
                       `}

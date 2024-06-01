@@ -169,5 +169,7 @@ export const tech_stacks = [
   { name: "SQL", src: "my-self/stacks/sql.png" },
   { name: "MUI", src: "my-self/stacks/mui.svg" },
   { name: "Tailwind", src: "my-self/stacks/tailwind.png" },
+  { name: "Postman", src: "my-self/stacks/postman.png" },
+  { name: "Github", src: "my-self/stacks/github.png" },
   { name: "Vite", src: "my-self/stacks/vite.png" },
 ]
